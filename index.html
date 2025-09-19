@@ -24,6 +24,48 @@
 
 
  <script>
+
+    /*Pessoa 1: Implementação das operações básicas (soma e subtração)
+
+Responsabilidade: A pessoa 1 vai implementar as funções de soma e subtração, além de garantir que o fundo da página mude para as cores apropriadas para essas operações.
+
+Funções principais:
+
+Função de somar dois números
+
+Função de subtrair dois números
+
+Alterar a cor do fundo para verde (soma) e azul (subtração)
+*/
+
+// Função para somar
+function somar() {
+  let num1 = parseFloat(document.getElementById("num1").value);
+  let num2 = parseFloat(document.getElementById("num2").value);
+  let resultado = num1 + num2;
+  
+  // Muda a cor do fundo para verde
+  document.body.style.backgroundColor = "green";
+  
+  // Exibe o resultado
+  document.getElementById("resultado").textContent = "Resultado: " + resultado;
+}
+
+// Função para subtrair
+function subtrair() {
+  let num1 = parseFloat(document.getElementById("num1").value);
+  let num2 = parseFloat(document.getElementById("num2").value);
+  let resultado = num1 - num2;
+  
+  // Muda a cor do fundo para azul
+  document.body.style.backgroundColor = "blue";
+  
+  // Exibe o resultado
+  document.getElementById("resultado").textContent = "Resultado: " + resultado;
+}
+
+
+
   /* TODO: Implemente aqui as funções*/
  </script>
 
