@@ -67,6 +67,45 @@ function subtrair() {
 
 
   /* TODO: Implemente aqui as funções*/
+
+  // Função para multiplicar
+function multiplicar() {
+  let num1 = parseFloat(document.getElementById("num1").value);
+  let num2 = parseFloat(document.getElementById("num2").value);
+  let resultado = num1 * num2;
+  
+  // Muda a cor do fundo para laranja
+  document.body.style.backgroundColor = "orange";
+  
+  // Exibe o resultado
+  document.getElementById("resultado").textContent = "Resultado: " + resultado;
+}
+
+// Função para dividir
+function dividir() {
+  let num1 = parseFloat(document.getElementById("num1").value);
+  let num2 = parseFloat(document.getElementById("num2").value);
+  
+  // Verifica se a divisão é por zero
+  if (num2 === 0) {
+    alert("Não é possível dividir por zero!");
+    return;
+  }
+
+  let resultado = num1 / num2;
+  
+  // Muda a cor do fundo para roxo
+  document.body.style.backgroundColor = "purple";
+  
+  // Exibe o resultado
+  document.getElementById("resultado").textContent = "Resultado: " + resultado;
+}
+
+<button onclick="somar()">Somar</button>
+<button onclick="subtrair()">Subtrair</button>
+<button onclick="multiplicar()">Multiplicar</button>
+<button onclick="dividir()">Dividir</button>
+
  </script>
 
 </body>
