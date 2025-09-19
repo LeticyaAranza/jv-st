@@ -14,98 +14,73 @@
     <input type="number" id="num1" placeholder="Digite o 1º número">
     <input type="number" id="num2" placeholder="Digite o 2º número">
  <br>
- 
-    <button onclick="">Somar</button>
-    <button onclick="">Subtrair</button>
-    <button onclick="">Multiplicar</button>
-    <button onclick="">Dividir</button>
     
     <p id="resultado">Resultado: </p>
+    
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
 
 
  <script>
 
-    /*Pessoa 1: Implementação das operações básicas (soma e subtração)
-
-Responsabilidade: A pessoa 1 vai implementar as funções de soma e subtração, além de garantir que o fundo da página mude para as cores apropriadas para essas operações.
-
-Funções principais:
-
-Função de somar dois números
-
-Função de subtrair dois números
-
-Alterar a cor do fundo para verde (soma) e azul (subtração)
-*/
-
-// Função para somar
+// Função para somar (linha 20)
 function somar() {
-  let num1 = parseFloat(document.getElementById("num1").value);
+  let num1 = parseFloat(document.getElementById("num1").value);// pega o valorzinho da string que o usuario digita e trasforma em int para as operações
   let num2 = parseFloat(document.getElementById("num2").value);
-  let resultado = num1 + num2;
+  let resultado = num1 + num2; // continha
   
   // Muda a cor do fundo para verde
-  document.body.style.backgroundColor = "green";
+  document.body.style.backgroundColor = "green"; // fala que o arq tem um corpo(body) e dentro dele um style e dentro do style tem como mudar a cor do fundo
   
-  // Exibe o resultado
+  // Exibe o resultado--- seleciona um elemento HTML com o ID "resultado" e define o seu conteúdo de texto para exibir a string "Resultado: " seguida do valor da variável resultado. 
   document.getElementById("resultado").textContent = "Resultado: " + resultado;
 }
 
-// Função para subtrair
+// Função para subtrair(linha 21)
 function subtrair() {
   let num1 = parseFloat(document.getElementById("num1").value);
   let num2 = parseFloat(document.getElementById("num2").value);
   let resultado = num1 - num2;
   
-  // Muda a cor do fundo para azul
+ 
   document.body.style.backgroundColor = "blue";
   
-  // Exibe o resultado
+  
   document.getElementById("resultado").textContent = "Resultado: " + resultado;
 }
 
-
-
-  /* TODO: Implemente aqui as funções*/
-
-  // Função para multiplicar
+  // Função para multiplicar(Linha 22)
 function multiplicar() {
   let num1 = parseFloat(document.getElementById("num1").value);
   let num2 = parseFloat(document.getElementById("num2").value);
   let resultado = num1 * num2;
   
-  // Muda a cor do fundo para laranja
+ 
   document.body.style.backgroundColor = "orange";
   
-  // Exibe o resultado
+ 
   document.getElementById("resultado").textContent = "Resultado: " + resultado;
 }
 
-// Função para dividir
+// Função para dividir(Linha 23)
 function dividir() {
   let num1 = parseFloat(document.getElementById("num1").value);
   let num2 = parseFloat(document.getElementById("num2").value);
   
   // Verifica se a divisão é por zero
   if (num2 === 0) {
-    alert("Não é possível dividir por zero!");
+    alert("Não é possível dividir por zero!");// um aviso na tela se for divisão por zero
     return;
   }
 
   let resultado = num1 / num2;
   
-  // Muda a cor do fundo para roxo
   document.body.style.backgroundColor = "purple";
   
-  // Exibe o resultado
   document.getElementById("resultado").textContent = "Resultado: " + resultado;
 }
-
-<button onclick="somar()">Somar</button>
-<button onclick="subtrair()">Subtrair</button>
-<button onclick="multiplicar()">Multiplicar</button>
-<button onclick="dividir()">Dividir</button>
-
  </script>
 
 </body>
